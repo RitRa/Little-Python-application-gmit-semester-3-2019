@@ -8,4 +8,4 @@ Two separate Databases
 2. mongo.json  - connect using pymongo 
 
 
-![](images/menu.png)
+![](images/menu.png 100x20)
