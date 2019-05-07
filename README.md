@@ -1,4 +1,4 @@
-# Little Python application
+# Little Python Application
 Applied Databases, Semester 3, GMIT 2019
 
 Python application using pymysql and pymongo 
