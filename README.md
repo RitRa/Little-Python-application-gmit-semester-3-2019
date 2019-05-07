@@ -9,3 +9,4 @@ Two separate Databases
 
 
 ![](images/menu.png 100x20)
+<img src="images/menu.png" width="200"/>
