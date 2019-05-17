@@ -40,6 +40,7 @@ Reads MongoDB database using PyMongo
 Select Choice 5 - Add new car
 
 Creates a new car in the database
+
 <img src="images/choice5.png" width="400"/>
 
 ## PyMySQL
