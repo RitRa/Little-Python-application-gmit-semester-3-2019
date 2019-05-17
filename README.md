@@ -8,6 +8,14 @@ Two separate Databases
 1. world.sql - connect using pymysql
 2. mongo.json  - connect using pymongo 
 
+
+
+## How to import json
+```
+mongod
+mongoimport --db mongo --collection docs --file mongo.json
+```
+
 Select your choice to interact with a database
 
 <img src="images/menu.png" width="400"/>
