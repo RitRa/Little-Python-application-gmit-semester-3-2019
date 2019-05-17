@@ -3,9 +3,11 @@ from connect import *
 # connect to mongo database
 from connect_mongod import *
 
+import sys
 
-# get the users number
-def get_number():
+
+# get the users choice
+def get_input():
     return input("Choice : ")
 
 # choice 2 get the population
@@ -18,16 +20,16 @@ def get_pop():
 
 # choice 3 add new city1
 def add_city():
+    # get the user to input values
     city = input("Enter city name : ")
     countrycode = input("Country Code :")
     district = input("District : ")
     population = input("Population : ")
     addcity(city, countrycode, district, population) 
 
-# choice 4 :find engine size
+# choice 4:find engine size
 def find_engineSize(): 
     engine = input("Enter engine Size : ")
-    #find(engine)
     call_query(engine)
 
 #choice 5: add a car
@@ -37,14 +39,21 @@ def add_car():
     engine = input("Enter Engine Size : ")
     addCar(car_id, reg, engine)
 
+# choice 6: view countries
 def view_country():
     country = input("Enter Country Name : ")
+    find_Country(country)
+
+# choice 7: view country by population
+def countryPop():
+    operator = input("Enter < > or = : ")
+    population = input("Enter population : ")
+    country_Population(operator,population)
 
 
 # menu
 def main():
     # try connection to mongo database
-
     #print the menu    
     print("World DB")
     print("-"*8 + "\n")
@@ -59,35 +68,47 @@ def main():
     print("6 - View Countries by name")
     print("7 - View Countries by population")
     print("x - Exit Application")
-    number = get_number()
-    choice(number)
+    user_input = get_input()
+    choice(user_input)
     
 
 # user defined choice
-def choice(number):
-    # turn into a number
-    number = int(number)
-    if (number == 1):
-        # choice 1 show the first 15 cities
-        #print ("Choice: ", number)
-        showcity()
-    elif (number == 2):
-        #print ("Choice: ", number)
-        get_pop()  
-    elif (number == 3):
-        print ("Choice: ", number)
-        add_city()  
-    elif (number == 4):
-        print ("Choice: ", number)
-        find_engineSize() 
-    elif (number == 5):
-        print ("Choice: ", number)
-        add_car() 
-    elif (number == 6):
-        print ("Choice: ", number)  
-        view_country()
-    elif (number == 7):
-        print ("Choice: ", number)        
+def choice(user_input):
+    # if the user input is a number begin checking which one
+    if(user_input.isdigit()):
+        number = int(user_input)
+        if (number == 1):
+            showcity()
+            main()
+        elif (number == 2):
+            get_pop()  
+            main()
+        elif (number == 3):
+            add_city() 
+            main() 
+        elif (number == 4):
+            find_engineSize() 
+            main()
+        elif (number == 5):
+            add_car() 
+            main()
+        elif (number == 6):
+            view_country()
+            main()
+        elif (number == 7): 
+            countryPop() 
+            main()
+
+    # otherwise it is a string        
+    else:
+        # if the user selected X terminiate the program
+        if(user_input =="x"):
+            print("Goodbye, see you again soon!")
+            quit()
+        # if they select another string show the menu again
+        else:
+            main() 
+  
 
 if __name__ == "__main__":
 	# execute only if run as a script 
