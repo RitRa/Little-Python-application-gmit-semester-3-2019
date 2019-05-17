@@ -1,8 +1,8 @@
 # Little Python Application
 Applied Databases, Semester 3, GMIT 2019
 
-Python application using pymysql and pymongo 
-CRUD
+Python application using pymysql(https://pymysql.readthedocs.io/en/latest/) and pymongo (https://api.mongodb.com/python/current/)
+
 
 Two separate Databases
 1. world.sql - connect using pymysql
@@ -27,10 +27,10 @@ Creates a new city and adds it to the database
 
 <img src="images/choice3.png" width="400"/>
 
-## Connects to MongoDB using PyMongo
+## PyMongo
 
 Select Choice 4 - Find car by Engine Size
-Reads mongo database
+Reads MongoDB database using PyMongo
 <img src="images/choice4.png" width="400"/>
 
 Select Choice 5 - Add new car
