@@ -34,6 +34,7 @@ Creates a new city and adds it to the database
 Select Choice 4 - Find car by Engine Size
 
 Reads MongoDB database using PyMongo
+
 <img src="images/choice4.png" width="400"/>
 
 Select Choice 5 - Add new car
