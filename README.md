@@ -8,4 +8,5 @@ Two separate Databases
 2. mongo.json  - connect using pymongo 
 
 Select your choice to interact with a database
+
 <img src="images/menu.png" width="400"/>
