@@ -10,7 +10,7 @@ Two separate Databases
 
 
 
-## How to import json
+### How to import json
 ```
 mongod
 mongoimport --db mongo --collection docs --file mongo.json
