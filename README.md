@@ -11,16 +11,34 @@ Select your choice to interact with a database
 
 <img src="images/menu.png" width="400"/>
 
+Select Choice 1 - View 15 Cities
+
 <img src="images/choice1.png" width="400"/>
+
+Select Choice 2 - View Cities by Population
 
 <img src="images/choice2.png" width="400"/>
 
+Select Choice 3 - Add a new city
+
 <img src="images/choice3.png" width="400"/>
+
+
+Select Choice 4 - Find car by Engine Size
 
 <img src="images/choice4.png" width="400"/>
 
+
+Select Choice 5 - Add new car
+
 <img src="images/choice5.png" width="400"/>
 
+
+Select Choice 6 - View Countries by Name
+
 <img src="images/choice6.png" width="400"/>
+
+
+Select Choice 7 - View Countries by Population
 
 <img src="images/choice7.png" width="400"/>
