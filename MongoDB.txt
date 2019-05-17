@@ -1,7 +1,0 @@
-db.docs.aggregate([{$match:{car:{$exists:true}}},{$group:{_id:null,"avg":{$avg:"$car.engineSize"} }}])
-
-
-db.docs.aggregate([{$match:{pop:{$exists:true}}},{$bucket: {groupBy: "$pop", boundaries: [ 0, 50000, 100000, 150000 ], default:"Other", output:{ "counties":{$push:{"name":"$name"}}}}}])
-
-
-db.docs.aggregate([{$match:{pop:{$exists:true}}},{$project:{_id: 1, name:1, pop:{$cond: { if: { $gte: [ "$pop", 100000 ] }, then: "Big County", else: "Small County" }}}}])
