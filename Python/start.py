@@ -51,12 +51,9 @@ def countryPop():
     country_Population(operator,population)
 
 
-
-
 # menu
 def main():
     # try connection to mongo database
-
     #print the menu    
     print("World DB")
     print("-"*8 + "\n")
@@ -82,23 +79,31 @@ def choice(user_input):
         number = int(user_input)
         if (number == 1):
             showcity()
+            main()
         elif (number == 2):
             get_pop()  
+            main()
         elif (number == 3):
-            add_city()  
+            add_city() 
+            main() 
         elif (number == 4):
             find_engineSize() 
+            main()
         elif (number == 5):
             add_car() 
+            main()
         elif (number == 6):
             view_country()
+            main()
         elif (number == 7): 
             countryPop() 
+            main()
 
     # otherwise it is a string        
     else:
         # if the user selected X terminiate the program
         if(user_input =="x"):
+            print("Goodbye, see you again soon!")
             quit()
         # if they select another string show the menu again
         else:

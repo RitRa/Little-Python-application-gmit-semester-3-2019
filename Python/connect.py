@@ -1,6 +1,7 @@
 import pymysql.cursors
 
 
+
 # Connect to the database
 conn = pymysql.connect(host='localhost',
                              user='root',
@@ -12,16 +13,10 @@ print ("connect successful!!")
 print(conn)
 
 
-def selectage():
-    with conn:
-        cursor = conn.cursor()  
-        sql = ('select personname, age from person;')  
-        cursor.execute(sql)
-        results = cursor.fetchall()
-        for row in results:
-            print (row)
+        
 
-# shows all cities
+
+# choice 1: shows all cities
 def showcity():
     with conn:
         cursor = conn.cursor()  
@@ -31,8 +26,9 @@ def showcity():
         for row in data:
             #print (row)
             print (row["ID"], ":", row["Name"] ,":", row["CountryCode"],":", row["District"], ":",row["Population"])
+        
 
-
+# choice 2
 # pulls in an operator (< > =) and population value
 def findpopulation(operator, population):
     #print("findpopulation", operator, population)
@@ -45,7 +41,7 @@ def findpopulation(operator, population):
             #print (row)
             print (row["ID"], ":", row["Name"] ,":", row["CountryCode"],":", row["District"], ":",row["Population"])
 
-
+# choice 3
 def addcity(city, countrycode, district, population):
     print("add city ", city, countrycode, district, population)
     with conn:
@@ -56,7 +52,8 @@ def addcity(city, countrycode, district, population):
             cursor.close()
             print("Insert Successful")
         except Exception as e:
-            print(e)
+            #print(e)
+            print("****Error***:CountryCode",countrycode, "does not exist" )
         #finally:
             
 

@@ -23,7 +23,7 @@ def addCar(car_id, reg, engine):
         coll.insert_one({'_id' : car_id, 'car':{'reg':reg, 'engineSize':engine}, 'addresses':[] })
         #show 
         for col in coll.find({"_id": car_id}):
-          print ("Great! You've just added: ", col["_id"] , ":",  col["car"]["reg"],":",  col["car"]["engineSize"] )
+          print ("Great! You've just added car: ", col["_id"] , ":",  col["car"]["reg"],":",  col["car"]["engineSize"] )
           
           
  
