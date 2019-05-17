@@ -14,6 +14,7 @@ Select your choice to interact with a database
 
 ## PyMySQL
 Select Choice 1 - View 15 Cities
+
 connects using pymysql world database and reads the data
 
 <img src="images/choice1.png" width="400"/>
@@ -23,6 +24,7 @@ Select Choice 2 - View Cities by Population
 <img src="images/choice2.png" width="400"/>
 
 Select Choice 3 - Add a new city
+
 Creates a new city and adds it to the database
 
 <img src="images/choice3.png" width="400"/>
@@ -30,10 +32,12 @@ Creates a new city and adds it to the database
 ## PyMongo
 
 Select Choice 4 - Find car by Engine Size
+
 Reads MongoDB database using PyMongo
 <img src="images/choice4.png" width="400"/>
 
 Select Choice 5 - Add new car
+
 Creates a new car in the database
 <img src="images/choice5.png" width="400"/>
 
